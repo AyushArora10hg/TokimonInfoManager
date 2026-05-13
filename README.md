@@ -29,18 +29,19 @@ The application allows users to **manage Tokimon data** through a user-friendly 
 ---
 
 ## Installation
-1. Clone the repository:  
+1. Clone the repository:
    ```bash
-   https://github.com/AyushArora10hg/TokimonInfoManager---CMPT213.git
-2. Open the project in your IDE (IntelliJ, Eclipse, etc.).
-3. Build the server with Maven:
+   https://github.com/AyushArora10hg/TokimonInfoManager
+2. Build the server with Maven:
    ```bash
+   cd TokimonWebServer
    mvn clean install
-4. Run the Spring Boot server:
+3. Run the Spring Boot server:
    ```bash
    mvn spring-boot:run
-5. Build and run the JavaFX client:
+4. Build and run the JavaFX client:
    ```bash
+   cd Client
    mvn javafx:run
 
 ---
