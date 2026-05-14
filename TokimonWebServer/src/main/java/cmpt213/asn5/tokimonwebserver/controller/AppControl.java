@@ -65,9 +65,16 @@ public class AppControl {
     }
 
     @PutMapping("/api/tokimon/edit/{id}")
-    public void editTokimon(@PathVariable int id, @RequestBody TokimonCard newCard) throws IOException {
+    public TokimonCard editTokimon(@PathVariable int id, @RequestBody TokimonCard newCard, HttpServletResponse response) throws IOException {
+
+        TokimonCard existing = tokimonList.getCard(id);
+        if (existing == null) {
+            response.setStatus(HttpServletResponse.SC_NOT_FOUND);
+            return null;
+        }
 
         tokimonList.editCard(id, newCard);
-
+        response.setStatus(HttpServletResponse.SC_OK);
+        return newCard;
     }
 }

@@ -206,10 +206,10 @@ public class ClientRequestManager{
 
                 if (connection.getResponseCode() == 204) {
 
-                    displayData("Card Deleted", "ff");
+                    displayData("Card Deleted", "file:src/images/delete.jpg");
                 }
                 else
-                    displayData("Card not Found", "Ff");
+                    displayData("Card not Found", "file:src/images/delete.jpg");
 
                 connection.disconnect();
 
@@ -240,6 +240,7 @@ public class ClientRequestManager{
                 id, name, type, rarity, hp, imgLink
         );
     }
+
 
 
 }
